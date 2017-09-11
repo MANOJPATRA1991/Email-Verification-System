@@ -1,8 +1,7 @@
-from sqlalchemy import (Column, ForeignKey, Integer,
-                        String, Boolean, DateTime, func)
+from sqlalchemy import (Column, Integer,
+                        String, Boolean, DateTime)
 
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 
 Base = declarative_base()
