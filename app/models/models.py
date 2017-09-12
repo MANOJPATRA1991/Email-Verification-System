@@ -8,6 +8,9 @@ Base = declarative_base()
 
 
 class User(Base):
+    """
+    User class to create user data
+    """
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)
@@ -16,6 +19,7 @@ class User(Base):
     is_verified = Column(Boolean, default=False)
     created_at = Column(DateTime, nullable=True)
     updated_at = Column(DateTime, nullable=True)
+
 
 engine = create_engine('postgresql://dbuser:users@localhost/users')
 
