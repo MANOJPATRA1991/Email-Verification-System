@@ -51,7 +51,7 @@ def email_verification():
                 response.headers['Content-Type'] = 'application/json'
                 return response
             # Check if user is verified
-            elif user.is_verified:
+            elif user is not None and user.is_verified:
                 response = make_response(json.dumps(
                     'Email already verified'), 200)
                 response.headers['Content-Type'] = 'application/json'
